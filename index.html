@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid_moma</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 200px);
+        }
+        .caixa{
+            background: purple;
+            border-radius: 20px;
+        }
+        .c1{
+            background: #00AFD7;
+        }
+        .C4{
+            background: #FFCD00;
+        }
+        .C5{
+            background: black;
+        }
+        .c1, .c4, .c5{
+            display: flex;
+            flex-direction: column;
+            padding: 1.3em 2.3em;
+            grid-column: 2 span;
+        }
+        .c2, .c3, .c6{
+            grid-column: 3 span;
+        }
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+        .c2 img{
+            object-position: top right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="caixa c1">
+            <h2>título de la obra</h2>
+            <h3>autor, apellido</h3>
+        </div>
+        <div class="caixa c2">2
+            <img src="img/Paisaje-HD.jpg" alt="">
+        </div>
+        <div class="caixa c3">3
+            <img src="img/Fondo-pantalla-macOS.jpg" alt="">
+        </div>
+        <div class="caixa c4">
+            <h2>título de la obra</h2>
+            <h3>autor, apellido</h3>
+        </div>
+        <div class="caixa c5">
+            <h2>título de la obra</h2>
+            <h3>autor, apellido</h3>
+        </div>
+        <div class="caixa c6">6
+            <img src="img/Unknown.jpeg" alt="">
+        </div>
+    </div>
+</body>
+</html>
